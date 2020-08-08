@@ -86,4 +86,16 @@ public class StrStrTest {
         int result = objectUnderTest.strStr("", null);
         assertThat(result, is(0));
     }
+
+    @Test
+    public void strStr_emptyHaystack_nonNullNeedle() {
+        int result = objectUnderTest.strStr("", "a");
+        assertThat(result, is(-1));
+    }
+
+    @Test
+    public void strStr_nullHaystack_nonNullNeedle() {
+        int result = objectUnderTest.strStr(null, "a");
+        assertThat(result, is(-1));
+    }
 }
