@@ -78,12 +78,12 @@ public class StrStrTest {
     @Test
     public void strStr_nullHaystack() {
         int result = objectUnderTest.strStr(null, null);
-        assertThat(result, is(-1));
+        assertThat(result, is(0));
     }
 
     @Test
     public void strStr_emptyHaystack() {
         int result = objectUnderTest.strStr("", null);
-        assertThat(result, is(-1));
+        assertThat(result, is(0));
     }
 }
